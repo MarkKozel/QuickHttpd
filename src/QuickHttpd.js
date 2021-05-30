@@ -2,7 +2,6 @@ const QuickJsonConfig = require('quickjsonconfig').QuickJsonConfig;
 const http = require("http");
 const fs = require('fs');
 const path = require('path');
-const url = require('url').URL;
 
 class QuickHttpd {
   constructor(config) {
@@ -13,6 +12,24 @@ class QuickHttpd {
     this.DEFAULTPAGE = this.config.getDefaultPage();
 
     this.httpdServer = null;
+
+    process.on('SIGTERM', () => {
+      if (this.httpdServer) {
+        this.shutdown();
+      }
+    });
+
+    process.on('SIGINT', () => {
+      if (this.httpdServer) {
+        this.shutdown();
+      }
+    });
+
+    process.on('exit', () => {
+      if (this.httpdServer) {
+        this.shutdown();
+      }
+    });
   }
 
   start() {
@@ -100,30 +117,14 @@ class QuickHttpd {
       .trim()
   };
 
-
-  //   shutdown() {
-  //     this.logMessage("Shuting Down");
-  //     httpdServer.close();
-  //     process.exit();
-  //   }
-
-  //   process.on('SIGTERM', () => {
-  //     shutdown();
-  //   });
-
-  // process.on('SIGINT', () => {
-  //   shutdown();
-  // });
-
-  // process.on('exit', () => {
-  //   shutdown();
-  // });
+  shutdown() {
+    console.log('');
+    this.logMessage("Shuting Down");
+    this.httpdServer.close();
+    this.httpdServer = null;
+    process.exit();
+  }
 }
-
-
-
-
-
 
 
 

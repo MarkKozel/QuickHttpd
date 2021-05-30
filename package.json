@@ -2,7 +2,7 @@
   "name": "quickhttpd",
   "version": "0.1.0",
   "description": "Simple HTTPD web servers that delivers html, css, jpg/ico, and scripts from local files",
-  "main": "httpd.js",
+  "main": "index.js",
   "scripts": {
     "up": "node httpd.js"
   },
