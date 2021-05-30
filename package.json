@@ -1,14 +1,26 @@
 {
   "name": "quickhttpd",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Simple HTTPD web servers that delivers html, css, jpg/ico, and scripts from local files",
+  "main": "httpd.js",
   "scripts": {
     "up": "node httpd.js"
   },
-  "keywords": [],
-  "author": "Mark Kozel <npm@markkozel.net>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkKozel/QuickHttpd.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "http"
+  ],
+  "author": "Mark Kozel <development@markkozel.net>",
   "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/MarkKozel/QuickHttpd/issues"
+  },
+  "homepage": "https://github.com/MarkKozel/QuickHttpd#readme",
   "dependencies": {
     "quickjsonconfig": "^1.1.4"
   }

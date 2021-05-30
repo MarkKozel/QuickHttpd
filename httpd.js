@@ -5,15 +5,14 @@ const fs = require('fs');
 const path = require('path');
 const url = require('url').URL;
 
-
-
-config = new QuickJsonConfig(path.join(__dirname, 'qhsConfig.json'));
+let config = new QuickJsonConfig(path.join(__dirname, 'config.json'));
 const HOST = config.getHostname();
 const PORT = config.getPort();
 const WEBPATH = config.getWWWRoot();
 const DEFAULTPAGE = config.getDefaultPage()
 
 function shutdown() {
+  logMessage("Shuting Down");
   httpdServer.close();
   process.exit();
 }
@@ -53,17 +52,6 @@ httpdServer.listen(PORT, HOST, () => {
     console.error(`Error: Failed to createHTML Server on http://${HOST}:${PORT}`)
   };
 });
-
-
-//Returns URL params -or- false if none were present
-// function checkParams(request) {
-//   let result = false;
-//   const obj = url.parse(request.url, true).query;
-//   if ((Object.keys(obj).length !== 0) && (obj.constructor !== Object)) {
-//     result = obj;
-//   }
-//   return result;
-// }
 
 function handleGet(request, response) {
   const { url } = request;

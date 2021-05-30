@@ -5,6 +5,8 @@ Simple HTTPD web servers that delivers html, css, jpg/ico, and scripts from loca
 ## Requires:
 - Node 14.x, maybe earlier
 
+## Dependancies
+- [quickjsonconfig 1.1.4](https://github.com/MarkKozel/quickjsonconfig)
 ## Usage:
 
 
