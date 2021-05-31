@@ -20,8 +20,5 @@
   "bugs": {
     "url": "https://github.com/MarkKozel/QuickHttpd/issues"
   },
-  "homepage": "https://github.com/MarkKozel/QuickHttpd#readme",
-  "dependencies": {
-    "quickjsonconfig": "^1.1.4"
-  }
+  "homepage": "https://github.com/MarkKozel/QuickHttpd#readme"
 }
