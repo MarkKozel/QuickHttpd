@@ -43,7 +43,7 @@ The example config file, ```node_modules/quickhttpd/config.js``` contains defaul
 
 > Function in the config.Function block will all be expressed as **QuickHttpd** class members. As such, ```this.``` is required when calling any of these functions
 >
->See ```logInfo(msg)``` and how it call ```this.timestamp()``` defined in ```//Support function used by expected/optional function``` block
+>See ```Function.logInfo(msg)``` call to ```this.timestamp()``` defined in ```//Support function used by expected/optional function``` block
 
 ```javascript
 module.exports = {
