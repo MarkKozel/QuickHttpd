@@ -189,9 +189,12 @@ Attribution-NonCommercial-ShareAlike 4.0 International
 ## Miscellany
 
 ### Near Future to-dos
-None
+- Add terminal ```CTRL``` keys to reload HTLM and Restart Server
 
 ### Version History
+
+0.2.2 - Cleaned up HTML and css in ```www``` examples. Removed bootstrap.min.js and popper.js. using CDN links in HTML
+
 0.2.0 - Removed .json config. Implemented ```config.js```. Added configurable logging/shutdown, lifecycle hooks, and custom functions
 
 0.1.5 - Initial buildup for side project. Implementing minimal elements
